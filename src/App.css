@@ -1,0 +1,79 @@
+html {
+  background: darkgray;
+  font-size: 24px;
+}
+
+.component-container {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+/* -------------------------- Badge Component -------------------------- */
+
+.badge-grid {
+  display: grid;
+  grid-template: auto auto / repeat(8, 1fr);
+  gap: 1em;
+  grid-auto-flow: column;
+}
+
+/* General */
+.badge {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  width: min-content;
+  padding: 0.125em 0.75em;
+}
+
+/* Shapes */
+.badge--square {
+  border-radius: 0.25em;
+}
+
+.badge--pill {
+  border-radius: 0.75em;
+}
+
+/* Colors */
+.badge--gray {
+  background: #F3F4F6;
+  color: #1F2937;
+}
+
+.badge--red {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.badge--yellow {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.badge--green {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.badge--blue {
+  background: #DBEAFE;
+  color: #1E40AF;
+}
+
+.badge--indigo {
+  background: #E0E7FF;
+  color: #3730A3;
+}
+
+.badge--purple {
+  background: #EDE9FE;
+  color: #5B21B6;
+}
+
+.badge--pink {
+  background: #FCE7F3;
+  color: #9D174D;
+}
