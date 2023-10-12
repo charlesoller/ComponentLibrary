@@ -163,3 +163,51 @@ html {
 .banner__message--bold {
   font-weight: 700;
 }
+
+/* -------------------------- Card Component -------------------------- */
+
+.card {
+  display: grid;
+  grid-template: 1.5rem 1.5rem auto / auto 3rem auto;
+  width: 60%;
+}
+
+.card__content {
+  grid-row: 2 / -1;
+  grid-column: 1 / -1;
+  background: #F9FAFB;
+  border-radius: 0.5em;
+  text-align: center;
+  padding: 3em 1.5em 1em 1.5em;
+}
+
+.card__title {
+  color: #111827;
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}
+
+.card__body {
+  color: #6B7280;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+.card__icon__bg {
+  border-radius: 6px;
+  background: #3F75FE;
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.10);
+}
+
+.card__icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
