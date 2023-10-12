@@ -1,10 +1,15 @@
 html {
-  background: darkgray;
+  background: rgb(37, 37, 37);
   font-size: 24px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
 .component-container {
   display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin: 0 auto;
+  width: 80%;
   justify-content: center;
   padding: 2em;
 }
@@ -20,7 +25,6 @@ html {
 
 /* General */
 .badge {
-  font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.25rem;
@@ -76,4 +80,86 @@ html {
 .badge--pink {
   background: #FCE7F3;
   color: #9D174D;
+}
+
+/* -------------------------- Banner Component -------------------------- */
+
+.banner-grid {
+  display: grid;
+  gap: 1em;
+}
+
+/* General */
+.banner {
+  display: grid;
+  grid-template: auto 1fr / min-content auto;
+  grid-template-areas:
+      "icon message"
+      ".... content";
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  padding: 1em;
+  border-radius: 0.375em;
+  column-gap: 0.75em;
+}
+
+.banner__icon {
+  grid-area: icon;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.banner__message {
+  grid-area: message;
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.banner__content {
+  grid-area: content;
+  margin: 0.5em 0 0 0;
+}
+
+/* Banner Body */
+.banner--neutral {
+  color: #1C51B9;
+  background: #EFF6FF;
+}
+
+.banner--success {
+  color: #047857;
+  background: #ECFDF5;
+}
+
+.banner--warning {
+  color: #B45309;
+  background: #FFFBEB;
+}
+
+.banner--error {
+  color: #B45309;
+  background: #FEF2F2;
+}
+
+/* Banner Message */
+.banner__message--neutral {
+  color: #1E40AF;
+}
+
+.banner__message--success {
+  color: #065F46;
+}
+
+.banner__message--warning {
+  color: #92400E;
+}
+
+.banner__message--error {
+  color: #92400E;
+}
+
+.banner__message--bold {
+  font-weight: 700;
 }
