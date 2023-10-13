@@ -7,7 +7,6 @@ import xIcon from '../assets/x-circle-icon.svg';
 
 export default function Banner({ status="neutral", message="Please provide a primary message.", children }){
     function determineIcon(){
-        console.log(status)
         return (
             status === 'success' ? checkIcon
             : status === 'warning' ? exclamationIcon
