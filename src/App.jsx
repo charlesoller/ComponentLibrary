@@ -7,8 +7,8 @@ function App() {
 
   return (
     <div className='component-container'>
-      {/* <BadgeCollection /> */}
-      {/* <BannerCollection /> */}
+      <BadgeCollection />
+      <BannerCollection />
       <CardCollection />
     </div>
   )

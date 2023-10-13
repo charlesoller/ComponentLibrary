@@ -4,6 +4,7 @@ import Badge from './Badge'
 export default function BadgeCollection(){
     return (
         <div className="badge-grid">
+            <h1 className="badge-grid__title">Badge Component</h1>
             <Badge shape="square" color="gray">
             Badge
             </Badge>

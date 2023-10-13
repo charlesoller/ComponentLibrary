@@ -4,6 +4,7 @@ import Banner from './Banner'
 export default function BannerCollection(){
     return (
         <div className='banner-grid'>
+            <h1 className="banner-grid__title">Banner Component</h1>
             <Banner status="neutral" message="Update available">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.
             </Banner>

@@ -1,17 +1,21 @@
 import React from 'react'
 import cloudIcon from '../assets/cloud-icon.svg';
 
-export default function Card({ icon, title, children, color }){
+export default function Card({ icon, title, children, width='100%', darkMode='light', color='default' }){
 
-    // console.log(children)
+    function isHex(str){
+        return str[0] === '#';
+    }
+
     return (
-        <div className={`card card--${color}`}>
-            <div className="card__content">
-                <h1 className="card__title">{title}</h1>
-                <div className="card__body">{children}</div>
+        <div className={`card card--${color}`} style={{width: width}}>
+            <div className={`card__content card__content--${darkMode}`}>
+                {title && <h1 className="card__title">{title}</h1>}
+                {children && <div className="card__body">{children}</div>}
             </div>
-            <div className="card__icon__bg">
-                <img className="card__icon" src={cloudIcon} />
+            <div className={`card__icon__bg card__icon__bg--${color}`} style={{background: isHex(color) && color }}>
+                {icon ? <i>{icon}</i>
+                : <img className="card__icon--default" src={cloudIcon} />}
             </div>
         </div>
     )
