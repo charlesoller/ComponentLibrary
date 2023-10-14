@@ -1,6 +1,24 @@
+* {box-sizing: border-box;}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: #040016;
   font-family: Inter, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+@media (max-width: 670px){
+  h1 {
+    font-size: 1.3rem;
+    align-items: center;
+  }
+  div h1 {
+    text-align: center;
+  }
 }
 
 .component-container {
@@ -9,8 +27,9 @@ body {
   gap: 6em;
   margin: 0 auto;
   width: 80%;
-  justify-content: center;
-  padding: 4em;
+  /* justify-content: center; */
+  padding: 1em;
+  /* background-color: red; */
 }
 
 .badge-grid,
@@ -21,21 +40,30 @@ body {
 .tooltip-grid,
 .toast-grid {
   background: rgba(255, 255, 255, 0.25);
-  padding: 3em;
+  padding: 2em;
   border-radius: 2em;
+  width: 100%;
 }
 
 /* -------------------------- Badge Component -------------------------- */
 
 .badge-grid {
   display: grid;
-  grid-template: auto auto auto / repeat(8, 1fr);
-  /* grid-template-rows: repeat(auto-fit, 50px); */
-  /* grid-template: repeat(auto-fit, 50px) / repeat(auto-fit, 1fr); */
-  grid-auto-flow: column;
-  padding: 2.5em;
-  gap: 1.2em 2em;
-  margin: 0 auto;
+  /* overflow: hidden; */
+  /* grid-template: auto auto auto / repeat(auto-fit, 1fr); */
+  /* grid-auto-flow: column; */
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(40px, 100px));
+  justify-items: center;
+  gap: 1.2em 1.5em;
+  /* width: 85%; */
+}
+
+@media (max-width: 660px){
+  .badge-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
 }
 
 .badge-grid__title {
@@ -201,6 +229,13 @@ body {
  gap: 2em;
 }
 
+@media (max-width: 800px){
+  .card-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .card-collection__title {
   grid-column: 1 / -1;
   color: #fff;
@@ -211,7 +246,6 @@ body {
 .card {
   display: grid;
   grid-template: 1.5rem 1.5rem min-content / auto 3rem auto;
-  /* width: 100%; */
 }
 
 .card__content {
@@ -256,13 +290,13 @@ body {
 .card__title {
   font-size: 1.125rem;
   font-weight: 500;
-  line-height: 28px; /* 155.556% */
+  line-height: 28px;
 }
 
 .card__body {
   font-size: 1rem;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 }
 
 /* Icon */
@@ -310,7 +344,7 @@ body {
 
 .image-testimonial-title {
   color: #FFF;
-  margin: 0 auto 2em auto;
+  margin: 0 auto 0.5em auto;
 }
 
 /* General */
@@ -438,8 +472,8 @@ body {
   .image-testimonial.left,
   .image-testimonial.right {
     background: #FFF;
-    grid-template: 103px 103px auto / 1rem 344px 1rem;
-    width: min-content;
+    grid-template: 103px 103px auto / 7.5% 85% 7.5%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -467,9 +501,9 @@ body {
   }
 
   .image-testimonial__testimonial {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 500;
-    line-height: 32px;
+    line-height: 2rem;
   }
 
   .image-testimonial__testimonial__name {
@@ -491,6 +525,7 @@ body {
 
 .testimonial-grid {
   display: grid;
+  padding-bottom: 3em;
   gap: 2em;
 }
 
@@ -588,10 +623,21 @@ body {
 
 .tooltip-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
-  padding: 3em;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3em 3em 6em 3em;
   gap: 3.5em;
   margin: 0 auto;
+  justify-items: center;
+}
+
+@media (max-width: 1250px){
+  .tooltip-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5.5em;
+    width: fit-content;
+  }
 }
 
 .tooltip-grid__title {
@@ -606,7 +652,7 @@ body {
   line-height: 1.25rem;
   font-weight: 400;
   padding: 1em;
-  width: 22rem;
+  width: 90%;
   border-radius: 0.5rem;
   display: grid;
   grid-template: min-content min-content / auto auto auto;
@@ -750,7 +796,7 @@ body {
 }
 
 .toast-button {
-  padding: 2em 6em;
+  padding: 2em 4em;
   border-radius: 2em;
   background: #262626;
   font-size: 1.5rem;

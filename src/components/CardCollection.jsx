@@ -19,7 +19,7 @@ export default function CardCollection(){
                 <p>Doesn't even need a title!</p>
             </Card>
 
-            <Card title="Or children!" icon={<FaReact size={'1.5rem'} color='lightgray'/>} color='#1C2294' darkMode='dark'  width='50%'/>
+            <Card title="Or children!" icon={<FaReact size={'1.5rem'} color='lightgray'/>} color='#1C2294' darkMode='dark'/>
         </div>
     )
 }
