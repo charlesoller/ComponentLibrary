@@ -18,7 +18,8 @@ html {
 .banner-grid,
 .card-grid,
 .image-testimonial-grid,
-.testimonial-grid {
+.testimonial-grid,
+.tooltip-grid {
   background: rgba(255, 255, 255, 0.15);
   padding: 2em;
   border-radius: 1em;
@@ -29,6 +30,7 @@ html {
 .badge-grid {
   display: grid;
   grid-template: auto auto auto / repeat(8, 1fr);
+  grid-auto-flow: column;
   padding: 1em;
   gap: 1em;
   margin: 0 auto;
@@ -503,6 +505,7 @@ html {
   text-align: center;
 }
 
+/* Dark/Light Modes */
 .testimonial.light {
   background: #F9FAFB;
   color: #111827;
@@ -522,6 +525,7 @@ html {
   background-size: 240px;
 }
 
+/* Content */
 .testimonial__logo {
   order: -1;
 }
@@ -549,6 +553,7 @@ html {
   color: #6B7280;
 }
 
+ /* Media Query */
 @media (max-width: 750px) {
   .testimonial {
     text-align: left;
@@ -575,27 +580,52 @@ html {
   }
 }
 
-/* .card__content--light {
-  background: #F9FAFB;
+/* -------------------------- Tooltip Component -------------------------- */
+
+.tooltip-grid {
+  display: grid;
+  grid-template: auto auto auto / repeat(8, 1fr);
+  padding: 1em;
+  gap: 1em;
+  margin: 0 auto;
 }
 
-.card__content--light .card__title{
-  color: #111827;
-}
-
-.card__content--light .card__body{
-  color: #6B7280;
-}
-
-/* Dark Mode */
-/* .card__content--dark {
-  background: #121212;
-}
-
-.card__content--dark .card__title{
+.tooltip-grid__title {
+  grid-column: 1 / -1;
+  margin: 0.5em auto;
   color: #fff;
 }
 
-.card__content--dark .card__body{
-  color: rgba(255, 255, 255, 0.7);
-} */
+/* General */
+
+.tooltip {
+  background: #262626;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  display: grid;
+  grid-template: auto auto / auto auto auto;
+  grid-template-areas:
+      "icon title x"
+      "... text ...";
+}
+
+.tooltip__title {
+  font-style: normal;
+  font-weight: 500;
+  grid-area: title;
+}
+
+.tooltip__text {
+  color: #C7C7C7;
+  grid-area: text;
+}
+
+.tooltip__icon {
+  grid-area: icon;
+}
+
+.tooltip__x {
+  grid-area: x;
+}

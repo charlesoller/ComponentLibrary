@@ -4,6 +4,7 @@ import BannerCollection from './components/BannerCollection.jsx'
 import CardCollection from './components/CardCollection.jsx'
 import ImageTestimonialCollection from './components/ImageTestimonialCollection'
 import TestimonialCollection from './components/TestimonialCollection'
+import TooltipCollection from './components/TooltipCollection'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <CardCollection />
       <ImageTestimonialCollection />
       <TestimonialCollection />
+      <TooltipCollection />
     </div>
   )
 }
