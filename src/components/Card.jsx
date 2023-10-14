@@ -14,7 +14,7 @@ export default function Card({ icon, title, children, width='100%', darkMode='li
                 {children && <div className="card__body">{children}</div>}
             </div>
             <div className={`card__icon__bg card__icon__bg--${color}`} style={{background: isHex(color) && color }}>
-                {icon ? <i>{icon}</i>
+                {icon ? <i className='card__icon'>{icon}</i>
                 : <img className="card__icon--default" src={cloudIcon} />}
             </div>
         </div>

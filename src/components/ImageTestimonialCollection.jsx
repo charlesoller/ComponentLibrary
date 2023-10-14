@@ -5,7 +5,7 @@ import profilePic from '../assets/profile-pic.jpeg'
 export default function ImageTestimonialCollection(){
     return (
         <div className="image-testimonial-grid">
-            <h1 className="image-testimonial-title">Image Testimonial</h1>
+            <h1 className="image-testimonial-title">Image Testimonial Component</h1>
             <ImageTestimonial image={profilePic} name='May Andersons' title='Workcation, CTO' imgPosition='right' color='#6F8AE3'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
             </ImageTestimonial>

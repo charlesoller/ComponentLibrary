@@ -3,6 +3,7 @@ import BadgeCollection from './components/BadgeCollection.jsx'
 import BannerCollection from './components/BannerCollection.jsx'
 import CardCollection from './components/CardCollection.jsx'
 import ImageTestimonialCollection from './components/ImageTestimonialCollection'
+import TestimonialCollection from './components/TestimonialCollection'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <BannerCollection />
       <CardCollection />
       <ImageTestimonialCollection />
+      <TestimonialCollection />
     </div>
   )
 }
