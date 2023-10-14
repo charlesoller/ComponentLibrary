@@ -15,11 +15,11 @@ export default function CardCollection(){
                 <p>Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
             </Card>
 
-            <Card color='#E66955' icon={<FaBtc color='white'/>} width='50%'>
+            <Card color='#E66955' icon={<FaBtc color='white'/>} width='55%'>
                 <p>Doesn't even need a title!</p>
             </Card>
 
-            <Card title="Or children!" icon={<FaReact size={'1.5rem'} color='lightgray'/>} color='#1C2294' darkMode='dark' />
+            <Card title="Or children!" icon={<FaReact size={'1.5rem'} color='lightgray'/>} color='#1C2294' darkMode='dark'  width='50%'/>
         </div>
     )
 }

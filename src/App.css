@@ -1,17 +1,17 @@
-html {
-  background: #121212;
-  font-size: 16px;
+body {
+  background: #030011;
   font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
 .component-container {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 6em;
   margin: 0 auto;
   width: 80%;
   justify-content: center;
-  padding: 2em;
+  padding: 4em;
+
 }
 
 .badge-grid,
@@ -20,9 +20,9 @@ html {
 .image-testimonial-grid,
 .testimonial-grid,
 .tooltip-grid {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 2em;
-  border-radius: 1em;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 3em;
+  border-radius: 2em;
 }
 
 /* -------------------------- Badge Component -------------------------- */
@@ -31,14 +31,14 @@ html {
   display: grid;
   grid-template: auto auto auto / repeat(8, 1fr);
   grid-auto-flow: column;
-  padding: 1em;
-  gap: 1em;
+  padding: 2.5em;
+  gap: 1.5em 2em;
   margin: 0 auto;
 }
 
 .badge-grid__title {
   grid-column: 1 / -1;
-  margin: 0.5em auto;
+  margin: 0 auto 1em auto;
   color: #fff;
 }
 
@@ -105,7 +105,7 @@ html {
 
 .banner-grid {
   display: grid;
-  gap: 1em;
+  gap: 2em;
 }
 
 .banner-grid__title {
@@ -437,6 +437,7 @@ html {
     background: #FFF;
     grid-template: 103px 103px auto / 1rem 344px 1rem;
     width: min-content;
+    margin: 0 auto;
   }
 
   .image-testimonial__image {
@@ -557,7 +558,7 @@ html {
 @media (max-width: 750px) {
   .testimonial {
     text-align: left;
-    padding: 4.6em 1em;
+    padding: 4.6em 2em;
     align-items: flex-start;
   }
 
@@ -584,9 +585,9 @@ html {
 
 .tooltip-grid {
   display: grid;
-  grid-template: auto auto auto / repeat(8, 1fr);
-  padding: 1em;
-  gap: 1em;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3em;
+  gap: 3.5em;
   margin: 0 auto;
 }
 
@@ -597,28 +598,46 @@ html {
 }
 
 /* General */
-
 .tooltip {
-  background: #262626;
-  color: #fff;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 400;
+  padding: 1em;
+  width: 22rem;
+  border-radius: 0.5rem;
   display: grid;
-  grid-template: auto auto / auto auto auto;
+  grid-template: min-content min-content / auto auto auto;
   grid-template-areas:
       "icon title x"
       "... text ...";
+  position: relative;
+}
+
+/* Arrow */
+.tooltip:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 13%;
+  width: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+/* Content */
+.tooltip__title,
+.tooltip__text {
+  margin: 0 1rem;
 }
 
 .tooltip__title {
+  grid-area: title;
   font-style: normal;
   font-weight: 500;
-  grid-area: title;
+  font-size: 14px;
 }
 
 .tooltip__text {
-  color: #C7C7C7;
   grid-area: text;
 }
 
@@ -629,3 +648,85 @@ html {
 .tooltip__x {
   grid-area: x;
 }
+
+/* Colors */
+
+/* Light */
+.tooltip--light {
+  background: #FFF;
+  color: #6B7280;
+}
+.tooltip--light:before { border-top: 20px solid #FFF; }
+.tooltip__title.tooltip--light { color: #111827; }
+.tooltip__icon.tooltip--light,
+.tooltip__x.tooltip--light { color: #6B7280; }
+
+/* Dark */
+.tooltip--dark {
+  background: #262626;
+  color: #C7C7C7;
+}
+.tooltip--dark:before { border-top: 20px solid #262626; }
+.tooltip__title.tooltip--dark { color: #FFF; }
+.tooltip__icon.tooltip--dark,
+.tooltip__x.tooltip--dark { color: #C7C7C7; }
+
+/* Blue */
+.tooltip--blue {
+  background: #1E40AF;
+  color: #E8EDFF;
+}
+.tooltip--blue:before { border-top: 20px solid #1E40AF; }
+.tooltip__title.tooltip--blue { color: #FFF; }
+.tooltip__icon.tooltip--blue { color: #7EA6F2; }
+.tooltip__x.tooltip--blue { color: #D8D8D8; }
+
+/* Light Blue */
+.tooltip--lightblue {
+  background: #E0E7FF;
+  color: #1C51B9;
+}
+.tooltip--lightblue:before { border-top: 20px solid #E0E7FF; }
+.tooltip__title.tooltip--lightblue { color: #1E40AF; }
+.tooltip__icon.tooltip--lightblue,
+.tooltip__x.tooltip--lightblue { color: #1C51B9; }
+
+/* Pink */
+.tooltip--pink {
+  background: #A9229B;
+  color: #FFE9FD;
+}
+.tooltip--pink:before { border-top: 20px solid #A9229B; }
+.tooltip__title.tooltip--pink { color: #FFF; }
+.tooltip__icon.tooltip--pink { color: #F462E6; }
+.tooltip__x.tooltip--pink { color: #D8D8D8; }
+
+/* Light Pink */
+.tooltip--lightpink {
+  background: #FFF3FC;
+  color: #C7369E;
+}
+.tooltip--lightpink:before { border-top: 20px solid #FFF3FC; }
+.tooltip__title.tooltip--lightpink { color: #A9229B; }
+.tooltip__icon.tooltip--lightpink,
+.tooltip__x.tooltip--lightpink { color: #C7369E; }
+
+/* Green */
+.tooltip--green {
+  background: #47AA5D;
+  color: #E3FFE9;
+}
+.tooltip--green:before { border-top: 20px solid #47AA5D; }
+.tooltip__title.tooltip--green { color: #FFF; }
+.tooltip__icon.tooltip--green { color: #C1FFCF; }
+.tooltip__x.tooltip--green { color: #D8D8D8; }
+
+/* Light green */
+.tooltip--lightgreen {
+  background: #E7FFF3;
+  color: #3C8C4E;
+}
+.tooltip--lightgreen:before { border-top: 20px solid #E7FFF3; }
+.tooltip__title.tooltip--lightgreen { color: #137A2A; }
+.tooltip__icon.tooltip--lightgreen { color: #41A557; }
+.tooltip__x.tooltip--lightgreen { color: #3C8C4E; }
