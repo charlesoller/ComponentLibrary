@@ -10,7 +10,7 @@ export default function ImageTestimonial({ children, image, name, title, imgPosi
 
     return (
         <div className={`image-testimonial ${imgPosition} ${text}`}>
-            <div className={`image-testimonial__container`} style={{background: isHex(color) && color }}>
+            <div className={`image-testimonial__container image-testimonial__container--${color}`} style={{background: isHex(color) && color }}>
                     <p className={`image-testimonial__testimonial ${imgPosition}`}>{children}</p>
                     <p className={`image-testimonial__testimonial__name ${imgPosition}`}>{name}</p>
                     <p className={`image-testimonial__testimonial__title ${imgPosition}`}>{title}</p>

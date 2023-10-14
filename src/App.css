@@ -30,7 +30,7 @@ html {
   grid-template: auto auto auto / repeat(8, 1fr);
   padding: 1em;
   gap: 1em;
-  grid-auto-flow: column;
+  margin: 0 auto;
 }
 
 .badge-grid__title {
@@ -275,85 +275,35 @@ html {
   box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.10);
 }
 
-/* Icon Background Colors */
-.card__icon__bg--default {
-  background: #3F75FE;
-}
-
-.card__icon__bg--gray {
-  background: #F3F4F6;
-}
-
-.card__icon__bg--darkgray {
-  background: #1F2937;
-}
-
-.card__icon__bg--red {
-  background: #FEE2E2;
-}
-
-.card__icon__bg--darkred {
-  background: #991B1B;
-}
-
-.card__icon__bg--yellow {
-  background: #FEF3C7;
-}
-
-.card__icon__bg--darkyellow {
-  background: #92400E;
-}
-
-.card__icon__bg--green {
-  background: #D1FAE5;
-}
-
-.card__icon__bg--darkgreen {
-  background: #065F46;
-}
-
-.card__icon__bg--blue {
-  background: #DBEAFE;
-}
-
-.card__icon__bg--darkblue {
-  background: #1E40AF;
-}
-
-.card__icon__bg--indigo {
-  background: #E0E7FF;
-}
-
-.card__icon__bg--darkindigo {
-  background: #3730A3;
-}
-
-.card__icon__bg--purple {
-  background: #EDE9FE;
-}
-
-.card__icon__bg--darkpurple {
-  background: #5B21B6;
-}
-
-.card__icon__bg--pink {
-  background: #FCE7F3;
-}
-
-.card__icon__bg--darkpink {
-  background: #9D174D;
-}
+/* Icon Built-in Background Colors */
+.card__icon__bg--default { background: #3F75FE; }
+.card__icon__bg--gray { background: #F3F4F6; }
+.card__icon__bg--darkgray { background: #1F2937; }
+.card__icon__bg--red { background: #FEE2E2; }
+.card__icon__bg--darkred { background: #991B1B }
+.card__icon__bg--yellow { background: #FEF3C7 }
+.card__icon__bg--darkyellow { background: #92400E; }
+.card__icon__bg--green { background: #D1FAE5; }
+.card__icon__bg--darkgreen { background: #065F46; }
+.card__icon__bg--blue { background: #DBEAFE; }
+.card__icon__bg--darkblue { background: #1E40AF; }
+.card__icon__bg--indigo { background: #E0E7FF; }
+.card__icon__bg--darkindigo { background: #3730A3; }
+.card__icon__bg--purple { background: #EDE9FE; }
+.card__icon__bg--darkpurple { background: #5B21B6; }
+.card__icon__bg--pink { background: #FCE7F3; }
+.card__icon__bg--darkpink { background: #9D174D; }
 
 /* -------------------------- Testimonial Component -------------------------- */
 
 .image-testimonial-grid {
   display: grid;
-  gap: 1em;
+  justify-content: center;
 }
 
 .image-testimonial-title {
   color: #FFF;
-  margin: 0 auto 0.5em auto;
+  margin: 0 auto 2em auto;
 }
 
 /* General */
@@ -361,22 +311,6 @@ html {
   height: 80%;
   font-weight: 500;
   display: grid;
-}
-
-.image-testimonial.light {
-  color: #FFFFFF;
-}
-
-.image-testimonial.dark {
-  color: #121212
-}
-
-.image-testimonial.left {
-  grid-template: 8% 84% 8% / 6% 31.5% 62.5%;
-}
-
-.image-testimonial.right {
-  grid-template: 8% 84% 8% / 62.5% 31.5% 6%;
 }
 
 .image-testimonial__image {
@@ -392,11 +326,28 @@ html {
 .image-testimonial__container {
   grid-row: 2;
   grid-column: 1 / -1;
-  background: #2545B8;
   display: flex;
   flex-direction: column;
   padding: 3em;
   justify-content: center;
+}
+
+/* Light and Dark Texts */
+.image-testimonial.light {
+  color: #FFFFFF;
+}
+
+.image-testimonial.dark {
+  color: #121212
+}
+
+/* Image Alignment */
+.image-testimonial.left {
+  grid-template: 8% 84% 8% / 6% 31.5% 62.5%;
+}
+
+.image-testimonial.right {
+  grid-template: 8% 84% 8% / 62.5% 31.5% 6%;
 }
 
 .image-testimonial__testimonial.left,
@@ -413,7 +364,7 @@ html {
   padding-right: 40%;
 }
 
-
+/* Text / Icon */
 .image-testimonial__testimonial {
   font-size: 1.5rem;
   margin: 1em 0;
@@ -436,10 +387,6 @@ html {
   width: min-content
 }
 
-.image-testimonial__testimonial__icon.dark {
-  color: #121212
-}
-
 /* Media Queries */
 @media (max-width: 1250px){
   .image-testimonial {
@@ -456,17 +403,78 @@ html {
   }
 }
 
-@media (max-width: 950px){
-  .image-testimonial {
-    font-size: .5rem;
+/* Built-in Colors */
+.image-testimonial__container--default { background: #2545B8; }
+.image-testimonial__container--gray { background: #F3F4F6; }
+.image-testimonial__container--darkgray { background: #1F2937; }
+.image-testimonial__container--red { background: #FEE2E2; }
+.image-testimonial__container--darkred { background: #991B1B }
+.image-testimonial__container--yellow { background: #FEF3C7 }
+.image-testimonial__container--darkyellow { background: #92400E; }
+.image-testimonial__container--green { background: #D1FAE5; }
+.image-testimonial__container--darkgreen { background: #065F46; }
+.image-testimonial__container--blue { background: #DBEAFE; }
+.image-testimonial__container--darkblue { background: #1E40AF; }
+.image-testimonial__container--indigo { background: #E0E7FF; }
+.image-testimonial__container--darkindigo { background: #3730A3; }
+.image-testimonial__container--purple { background: #EDE9FE; }
+.image-testimonial__container--darkpurple { background: #5B21B6; }
+.image-testimonial__container--pink { background: #FCE7F3; }
+.image-testimonial__container--darkpink { background: #9D174D; }
+
+/* Card */
+@media (max-width: 1000px){
+  .image-testimonial-grid {
+    gap: 2em;
+  }
+
+  .image-testimonial.left,
+  .image-testimonial.right {
+    background: #FFF;
+    grid-template: 103px 103px auto / 1rem 344px 1rem;
+    width: min-content;
+  }
+
+  .image-testimonial__image {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    object-position: 65% 35%;
+  }
+
+  .image-testimonial__testimonial.left,
+  .image-testimonial__testimonial__name.left,
+  .image-testimonial__testimonial__title.left,
+  .image-testimonial__testimonial__icon.left,
+  .image-testimonial__testimonial.right,
+  .image-testimonial__testimonial__name.right,
+  .image-testimonial__testimonial__title.right,
+  .image-testimonial__testimonial__icon.right {
+    padding: 0;
+  }
+
+  .image-testimonial__container {
+    grid-row: 2 / -1;
+    grid-column: 1 / -1;
+    padding-top: 150px;
   }
 
   .image-testimonial__testimonial {
-    font-size: .75rem;
-    line-height: 1.2rem;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+
+  .image-testimonial__testimonial__name {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .image-testimonial__testimonial__title {
+    font-size: 1rem;
+    line-height: 2rem;
   }
 
   .image-testimonial__testimonial__icon {
-    height: 1rem;
+    height: 2rem;
   }
 }
