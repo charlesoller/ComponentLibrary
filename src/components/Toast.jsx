@@ -26,8 +26,3 @@ export default function Badge({ title='Please provide a primary message.', statu
     );
 }
 
-{/* <div className={`toast toast--${status}`}>
-<h2 className={`toast__title toast--${status}`}>{title}</h2>
-<p className={`toast__text toast--${status}`}>{children}</p>
-<img className={`toast__icon`} src={determineIcon()}/>
-</div> */}
