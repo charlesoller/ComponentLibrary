@@ -36,7 +36,7 @@ body {
 .tooltip-grid,
 .toast-grid {
   background: rgba(255, 255, 255, 0.25);
-  padding: 2em;
+  padding: 3em;
   border-radius: 2em;
   width: 100%;
 }
@@ -490,7 +490,7 @@ body {
 /* Card */
 @media (max-width: 800px){
   .image-testimonial-grid {
-    gap: 3em;
+    gap: 4em;
   }
 
   .image-testimonial.left,
@@ -545,7 +545,7 @@ body {
   }
 
   .image-testimonial-grid {
-    padding-bottom: 2.5em;
+    padding-bottom: 3.5em;
   }
 }
 
@@ -703,7 +703,7 @@ body {
   }
 
   .tooltip {
-    margin-bottom: 3.5em;
+    margin-bottom: 4.5em;
   }
 }
 
