@@ -9,15 +9,13 @@ body {
   background: #040016;
   font-family: Inter, Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  padding: 4em 0;
 }
 
 @media (max-width: 670px){
-  h1 {
-    font-size: 1.3rem;
-    align-items: center;
-  }
-  div h1 {
+  .section__header {
     text-align: center;
+    font-size: 1.5rem;
   }
 }
 
@@ -27,9 +25,7 @@ body {
   gap: 6em;
   margin: 0 auto;
   width: 80%;
-  /* justify-content: center; */
   padding: 1em;
-  /* background-color: red; */
 }
 
 .badge-grid,
@@ -49,20 +45,24 @@ body {
 
 .badge-grid {
   display: grid;
-  /* overflow: hidden; */
-  /* grid-template: auto auto auto / repeat(auto-fit, 1fr); */
-  /* grid-auto-flow: column; */
-  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-  grid-template-columns: repeat(auto-fit, minmax(40px, 100px));
+  grid-template: repeat(3, auto) / repeat(8, auto);
+  grid-auto-flow: column;
   justify-items: center;
-  gap: 1.2em 1.5em;
-  /* width: 85%; */
+  gap: 1.2em 1.2em;
+}
+
+@media (max-width: 940px) {
+  .badge-grid {
+    grid-template: repeat(5, auto) / repeat(4, 1fr);
+    grid-auto-flow: row;
+  }
 }
 
 @media (max-width: 660px){
   .badge-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template: repeat(9, auto) / repeat(2, 1fr);
     align-items: end;
+    justify-items: center;
   }
 }
 
@@ -78,6 +78,7 @@ body {
   font-weight: 500;
   line-height: 1.25rem;
   width: min-content;
+  text-align: center;
   height: min-content;
   padding: 0.125em 0.75em;
 }
@@ -137,6 +138,7 @@ body {
 .banner-grid {
   display: grid;
   gap: 2em;
+  padding-bottom: 3em;
 }
 
 .banner-grid__title {
@@ -335,16 +337,18 @@ body {
 .card__icon__bg--pink { background: #FCE7F3; }
 .card__icon__bg--darkpink { background: #9D174D; }
 
-/* -------------------------- Testimonial Component -------------------------- */
+/* -------------------------- Image Testimonial Component -------------------------- */
 
 .image-testimonial-grid {
   display: grid;
   justify-content: center;
+  padding: 3em 3em 0 3em;
+  gap: 2em;
 }
 
 .image-testimonial-title {
   color: #FFF;
-  margin: 0 auto 0.5em auto;
+  margin: 0 auto 2em auto;
 }
 
 /* General */
@@ -371,6 +375,7 @@ body {
   flex-direction: column;
   padding: 3em;
   justify-content: center;
+  width: 100%;
 }
 
 /* Light and Dark Texts */
@@ -463,10 +468,29 @@ body {
 .image-testimonial__container--pink { background: #FCE7F3; }
 .image-testimonial__container--darkpink { background: #9D174D; }
 
+@media (max-width: 1000px) {
+  .image-testimonial {
+    font-size: .6rem;
+  }
+
+  .image-testimonial__testimonial {
+    font-size: .8rem;
+    line-height: 1.4rem;
+  }
+
+  .image-testimonial__testimonial__icon {
+    height: 1.1rem;
+  }
+
+  .image-testimonial-title {
+    margin-bottom: 0em;
+  }
+}
+
 /* Card */
-@media (max-width: 1000px){
+@media (max-width: 800px){
   .image-testimonial-grid {
-    gap: 2em;
+    gap: 3em;
   }
 
   .image-testimonial.left,
@@ -474,7 +498,7 @@ body {
     background: #FFF;
     grid-template: 103px 103px auto / 7.5% 85% 7.5%;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 3em auto;
   }
 
   .image-testimonial__image {
@@ -519,13 +543,33 @@ body {
   .image-testimonial__testimonial__icon {
     height: 2rem;
   }
+
+  .image-testimonial-grid {
+    padding-bottom: 2.5em;
+  }
+}
+
+@media (max-width: 400px){
+  .image-testimonial__testimonial {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5em;
+  }
+
+  .image-testimonial__testimonial__icon {
+    height: 1.5rem;
+  }
+
+  .image-testimonial__testimonial__name {
+    line-height: 1.25rem;
+  }
 }
 
 /* -------------------------- Testimonial Component -------------------------- */
 
 .testimonial-grid {
   display: grid;
-  padding-bottom: 3em;
+  padding: 3em;
   gap: 2em;
 }
 
@@ -542,6 +586,7 @@ body {
   padding: 6em 4.4em 7em 4.4em;
   font-weight: 500;
   text-align: center;
+  margin-bottom: 3em;
 }
 
 /* Dark/Light Modes */
@@ -600,6 +645,11 @@ body {
     align-items: flex-start;
   }
 
+  .testimonial__quote {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
   .testimonial__info {
     flex-direction: column;
     justify-content: flex-start;
@@ -616,9 +666,21 @@ body {
 
   .testimonial__logo {
     margin: 0 auto;
+    width: 90%;
   }
 }
 
+@media (max-width: 400px){
+  .testimonial__quote {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5em;
+  }
+
+  .testimonial__logo {
+    width: 95%;
+  }
+}
 /* -------------------------- Tooltip Component -------------------------- */
 
 .tooltip-grid {
@@ -635,8 +697,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5.5em;
+    gap: 2em;
     width: fit-content;
+    padding-bottom: 1.5em;
+  }
+
+  .tooltip {
+    margin-bottom: 3.5em;
   }
 }
 
@@ -652,7 +719,7 @@ body {
   line-height: 1.25rem;
   font-weight: 400;
   padding: 1em;
-  width: 90%;
+  width: 95%;
   border-radius: 0.5rem;
   display: grid;
   grid-template: min-content min-content / auto auto auto;
@@ -667,7 +734,7 @@ body {
 .tooltip:before {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 98%;
   left: 13%;
   width: 0;
   border-left: 20px solid transparent;
@@ -796,7 +863,7 @@ body {
 }
 
 .toast-button {
-  padding: 2em 4em;
+  padding: 2em 0;
   border-radius: 2em;
   background: #262626;
   font-size: 1.5rem;
@@ -805,6 +872,7 @@ body {
   color: #FFF;
   border: none;
   font-family: Inter, Arial, Helvetica, sans-serif;
+  width: 100%;
 }
 
 .toast-button:hover {

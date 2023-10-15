@@ -4,7 +4,7 @@ import Tooltip from './Tooltip'
 export default function TooltipCollection(){
     return (
         <div className="tooltip-grid">
-            <h1 className="tooltip-grid__title">Tooltip Component</h1>
+            <h1 className="tooltip-grid__title section__header">Tooltip Component</h1>
             <Tooltip title="Archive notes" style='dark'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.
             </Tooltip>

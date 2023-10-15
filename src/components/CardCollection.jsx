@@ -6,7 +6,7 @@ export default function CardCollection(){
     //this should also accept an icon prop below
     return (
         <div className='card-grid'>
-            <h1 className="card-collection__title">Card Component</h1>
+            <h1 className="card-collection__title section__header">Card Component</h1>
             <Card title="Easy Deployment">
                 <p>Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
             </Card>

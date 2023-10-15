@@ -33,7 +33,7 @@ export default function ToastCollection(){
     }
     return (
         <div className="toast-grid">
-            <h1 className="toast-grid__title">Toast Component</h1>
+            <h1 className="toast-grid__title section__header">Toast Component</h1>
             <button className="toast-button" onClick={toggleToast}>Click Me!</button>
             {visible && toastArr[currToast]}
         </div>
