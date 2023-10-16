@@ -6,19 +6,23 @@ import ImageTestimonialCollection from './components/ImageTestimonialCollection'
 import TestimonialCollection from './components/TestimonialCollection'
 import TooltipCollection from './components/TooltipCollection'
 import ToastCollection from './components/ToastCollection'
+import Header from './components/Header'
 
 function App() {
 
   return (
-    <div className='component-container'>
-      <BadgeCollection />
-      <BannerCollection />
-      <CardCollection />
-      <ImageTestimonialCollection />
-      <TestimonialCollection />
-      <TooltipCollection />
-      <ToastCollection />
-    </div>
+    <>
+      <Header />
+      <div className='component-container'>
+        <BadgeCollection />
+        <BannerCollection />
+        <CardCollection />
+        <ImageTestimonialCollection />
+        <TestimonialCollection />
+        <TooltipCollection />
+        <ToastCollection />
+      </div>
+    </>
   )
 }
 

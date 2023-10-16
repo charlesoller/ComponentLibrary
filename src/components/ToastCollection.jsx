@@ -1,10 +1,23 @@
 import React, {useState} from 'react'
 import Toast from './Toast'
+import { motion } from "framer-motion"
 
 export default function ToastCollection(){
     const [ visible, setVisible ] = useState(false);
     const [ currToast, setCurrToast ] = useState(0);
     const [ timer, setTimer ] = useState();
+    const scale = 1.05;
+
+    const items = {
+        invisible: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 1.5,
+                ease: "easeOut"
+            }
+        }
+    }
 
     const toastArr = [
         <Toast title='Success' status='success'>
@@ -21,6 +34,7 @@ export default function ToastCollection(){
         </Toast>
     ]
 
+    console.log("FLAG", visible)
     function toggleToast(){
         clearTimeout(timer);
         if(currToast === 3){
@@ -34,7 +48,9 @@ export default function ToastCollection(){
     return (
         <div className="toast-grid">
             <h1 className="toast-grid__title section__header">Toast Component</h1>
-            <button className="toast-button" onClick={toggleToast}>Click Me!</button>
+            <motion.div whileHover={{scale: scale}}>
+                <button className="toast-button" onClick={toggleToast}  transition={{duration: 0.3}}>Click Me!</button>
+            </motion.div>
             {visible && toastArr[currToast]}
         </div>
     )

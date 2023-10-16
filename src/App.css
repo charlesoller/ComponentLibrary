@@ -9,7 +9,11 @@ body {
   background: #040016;
   font-family: Inter, Arial, Helvetica, sans-serif;
   overflow-x: hidden;
-  padding: 4em 0;
+}
+
+ol, ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 @media (max-width: 670px){
@@ -19,21 +23,32 @@ body {
   }
 }
 
+.header-section {
+  width: 100%;
+  padding: 1.5em 2.5em;
+  text-align: left;
+}
+
+.header-title {
+  margin: 0;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
 .component-container {
   display: flex;
   flex-direction: column;
   gap: 6em;
   margin: 0 auto;
   width: 80%;
-  padding: 1em;
+  padding: 2em 0;
 }
 
-.badge-grid,
 .banner-grid,
 .card-grid,
 .image-testimonial-grid,
 .testimonial-grid,
-.tooltip-grid,
 .toast-grid {
   background: rgba(255, 255, 255, 0.25);
   padding: 3em;
@@ -43,9 +58,29 @@ body {
 
 /* -------------------------- Badge Component -------------------------- */
 
+.marquee {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 206px;
+  overflow-x: hidden;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.badge-component-layout {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 3em;
+  border-radius: 2em;
+  width: 100%;
+}
+
 .badge-grid {
   display: grid;
-  grid-template: repeat(3, auto) / repeat(8, auto);
+  grid-template: repeat(2, auto) / repeat(8, auto);
   grid-auto-flow: column;
   justify-items: center;
   gap: 1.2em 1.2em;
@@ -53,14 +88,14 @@ body {
 
 @media (max-width: 940px) {
   .badge-grid {
-    grid-template: repeat(5, auto) / repeat(4, 1fr);
+    grid-template: repeat(4, auto) / repeat(4, 1fr);
     grid-auto-flow: row;
   }
 }
 
 @media (max-width: 660px){
   .badge-grid {
-    grid-template: repeat(9, auto) / repeat(2, 1fr);
+    grid-template: repeat(8, auto) / repeat(2, 1fr);
     align-items: end;
     justify-items: center;
   }
@@ -70,6 +105,7 @@ body {
   grid-column: 1 / -1;
   margin: 0 auto 1em auto;
   color: #fff;
+  text-align: center;
 }
 
 /* General */
@@ -235,6 +271,7 @@ body {
   .card-grid {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -248,6 +285,7 @@ body {
 .card {
   display: grid;
   grid-template: 1.5rem 1.5rem min-content / auto 3rem auto;
+  margin: 0 auto;
 }
 
 .card__content {
@@ -683,13 +721,26 @@ body {
 }
 /* -------------------------- Tooltip Component -------------------------- */
 
+.tooltip-component-layout {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 3em;
+  border-radius: 2em;
+  width: 100%;
+}
+
 .tooltip-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 3em 3em 6em 3em;
+  /* padding: 3em 3em 6em 3em; */
   gap: 3.5em;
   margin: 0 auto;
-  justify-items: center;
+  /* background-color: blue; */
+}
+
+.tooltip-grid li {
+  /* background-color: red; */
+  width: fit-content;
+  margin: 0 auto;
 }
 
 @media (max-width: 1250px){
@@ -709,8 +760,9 @@ body {
 
 .tooltip-grid__title {
   grid-column: 1 / -1;
-  margin: 0.5em auto;
+  margin: 0.5em auto 2em auto;
   color: #fff;
+  text-align: center;
 }
 
 /* General */
@@ -860,6 +912,10 @@ body {
 .toast-grid__title {
   color: #FFF;
   margin-bottom: 1.5em;
+}
+
+.toast-grid div {
+  width: 100%;
 }
 
 .toast-button {
